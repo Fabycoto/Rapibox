@@ -1,0 +1,258 @@
+/* Reset and container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main slider structure */
+.slider {
+  position: absolute;
+  width: 1440px;
+  height: 760px;
+  overflow: hidden;
+  top: 100px;
+}
+
+.slider-image {
+  position: absolute;
+  width: 1440px;
+  height: 757px;
+  top: 0;
+  left: 0;
+}
+
+.slider-track {
+  display: flex;
+  width: 200%; /* For two slides */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slides */
+.slider-image {
+  flex: 0 0 50%; /* Each slide takes half of track (for 2 slides) */
+  position: relative;
+  height: 100%;
+}
+
+/* Background and content positioning */
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+
+.image-1 {
+  position: absolute;
+  width: 54.39%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: url(../images/f25cb70f26d792b5937ae7bf8cb5c78f1b0de2e8.png)
+    no-repeat center;
+  background-size: cover;
+}
+
+.image-2 {
+  position: absolute;
+  width: 54.39%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: url(../images/0775c0b1393e774e82494f2ca2a37c7c3096579f.png)
+    no-repeat center;
+  background-size: cover;
+}
+
+/* Text styles */
+.slide-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 566px;
+  min-width: 0;
+  height: 168px;
+  color: var(--color-active);
+  font-family: Poppins, var(--default-font-family);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 55.752px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.slide-description {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  width: 512px;
+  height: 78px;
+  color: var(--color-text-primary);
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25.6px;
+  text-align: left;
+  letter-spacing: -0.32px;
+}
+
+/* Button styles */
+.button-f,
+.button-18 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 178px;
+  padding: 16px 32px;
+  background: var(--color-primary);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-now {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 137px;
+  height: 24px;
+  color: white;
+  font-family: Open Sans, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button-buy-now-container .button-buy-now:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--color-button-shadow);
+}
+
+.button-buy-now-container .button-buy-now:active {
+  transform: translateY(1px);
+}
+
+/* Navigation dots */
+.steps {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+
+  width: 5.64%;
+  height: 3.17%;
+  top: 94.06%;
+  fill: var(--color-active);
+}
+
+.slide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(58, 90, 64, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slide-dot.active {
+  background: var(--color-primary);
+}
+
+/* Navigation arrows */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.slider-prev {
+  left: 20px;
+}
+
+.slider-next {
+  right: 20px;
+}
+
+.slider-nav::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: solid var(--color-primary);
+  border-width: 0 2px 2px 0;
+}
+
+.slider-prev::after {
+  transform: rotate(135deg);
+}
+
+.slider-next::after {
+  transform: rotate(-45deg);
+}
+
+.frame-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 40px;
+  position: absolute;
+  width: 39.31%;
+  top: 24.83%;
+  left: 4.86%;
+}
+
+.button-buy-now-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  width: 178px;
+}
+
+.button-buy-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 10px;
+  position: relative;
+  width: 178px;
+  padding: 16px 32px 16px 32px;
+  background: var(--color-primary);
+  border-radius: 16px;
+}

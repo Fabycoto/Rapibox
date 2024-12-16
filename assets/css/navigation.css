@@ -1,0 +1,221 @@
+/* Base navigation container */
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 1077px;
+}
+
+/* Common button base styles */
+.nav-button {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Specific widths for each button */
+.nav-button.services {
+  width: 153px;
+}
+
+.nav-button.programs {
+  width: 283px;
+}
+
+.nav-button.tools {
+  width: 203px;
+}
+
+.nav-button.contact {
+  width: 190px;
+}
+
+.nav-button.profile {
+  width: 148px;
+}
+
+.nav-button.login {
+  width: 100px;
+  height: 50px;
+}
+
+/* Inner button container */
+.nav-button-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 32px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button label styles */
+.nav-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+/* Specific label widths */
+.nav-button.services .nav-label {
+  width: 89px;
+}
+
+.nav-button.programs .nav-label {
+  width: 219px;
+}
+
+.nav-button.tools .nav-label {
+  width: 139px;
+}
+
+.nav-button.contact .nav-label {
+  width: 126px;
+}
+
+.nav-button.profile .nav-label {
+  width: 84px;
+}
+
+.nav-button.login .nav-label {
+  width: 49px;
+  height: 22px;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+}
+
+/* Nav active button specific styles */
+.nav-button.active .nav-button-inner {
+  background: var(--color-primary);
+}
+
+/* Hover effects for regular buttons */
+.nav-button:not(.active) .nav-button-inner:hover {
+  background: rgba(58, 90, 64, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Hover effect for login button */
+.nav-button.active .nav-button-inner:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--color-button-shadow);
+}
+
+/* Active state for buttons */
+.nav-button .nav-button-inner:active {
+  transform: translateY(1px);
+}
+
+/* Text transform utilities */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.nav-bar-top {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background: #f8f8f8;
+
+  overflow: hidden;
+}
+.nav-bar-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 70px;
+  position: relative;
+  width: 1315px;
+  margin: 19px 0 0 62px;
+}
+.logo {
+  flex-shrink: 0;
+  position: relative;
+  width: 156px;
+  height: 48px;
+}
+.frame {
+  position: absolute;
+  width: 30.77%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+}
+.group {
+  position: absolute;
+  width: 100%;
+  height: 100.16%;
+  top: 0;
+  left: 0;
+}
+.vector {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../images/0cb32367-fbd5-4f22-aa60-98f1177972b6.png) no-repeat
+    center;
+  background-size: 100% 100%;
+}
+.rapibox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 50%;
+  top: 10.42%;
+  left: 36.54%;
+  color: var(--color-primary-light);
+  font-family: Montserrat, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+}
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  width: 1077px;
+}
+.button {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  width: 153px;
+}
